@@ -1,6 +1,6 @@
-// Depending of the env choose the file to for your access keys
-if (process.env.NODE_ENV === "production") {
-  module.exports = require("./keys_prod");
-} else {
-  module.exports = require("./keys_dev");
-}
+// If you want to use this app you'll need to set up your keys here
+module.exports = {
+  mongoURI: process.env.MONGO_URI, // mLab URI - [ don't forget to setup a DB user first ]
+  googleClientID: process.env.G_ID, // Google Client ID
+  googleClientSecret: process.env.G_SECRET, // GoogleClient Secret
+};
